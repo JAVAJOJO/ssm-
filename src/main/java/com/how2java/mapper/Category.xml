@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+	<mapper namespace="com.how2java.mapper.CategoryMapper">
+	    <insert id="add" parameterType="Category" >
+	        insert into user2 (username,password,level,status ) values (#{username},#{password},#{level},#{status})
+	    </insert>
+	    <delete id="delete" parameterType="Category" >
+	        delete from user2 where id= #{id}
+	    </delete>
+
+	    <select id="get" parameterType="int" resultType="Category">
+	        select * from   user2  where id= #{uid}
+	    </select>
+
+	    <update id="update" parameterType="Category" >
+	        update user2 set password=#{password} where id=#{id}
+	    </update>
+	    <select id="list" resultType="Category">
+	        select * from   user2 order by id desc
+			<if test="start!=null and count!=null">
+				limit #{start},#{count}
+			</if>
+		</select>
+		<select id="total" resultType="int">
+		select count(*) from   user2
+		</select>
+</mapper>
+

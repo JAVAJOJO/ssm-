@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+	<mapper namespace="com.how2java.mapper.CategoryMapper2">
+	    <insert id="add2"  parameterType="Category2" >
+	        insert into video ( v_name,v_status,v_location,v_image ) values (#{v_name},#{v_status},#{v_location},#{,v_image})
+	    </insert>
+	    <delete id="delete2" parameterType="Category2" >
+	        delete from video  where v_id= #{v_id}
+	    </delete>	    
+	    <select id="get2" parameterType="_int" resultType="Category2">
+	        select * from  video  where v_id= #{v_id}    
+	    </select>
+
+	    <update id="update2" parameterType="Category2" >
+	        update video set v_status=#{v_status} where v_id=#{v_id}	   
+	    </update>	   
+	    <select id="list2" resultType="Category2">
+	        select * from  video order by v_id desc     
+	        <if test="start!=null and count!=null">
+                    limit #{start},#{count}
+            </if>     
+	    </select>
+
+	    <select id="total2" resultType="int">
+	        select count(*) from  video      
+	    </select>	    	    
+	</mapper>
+

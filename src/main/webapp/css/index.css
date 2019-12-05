@@ -1,0 +1,37 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+a{
+	text-decoration: none;
+	color: #ffffff;
+}
+.nav{
+	height: 50px;
+	background-color: #393D49;
+}
+.nav .left{
+	float: left;
+    color: #ffffff;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.nav .right{
+    
+	float: right;	
+}
+.nav .right .layui-nav-item{
+	height: 50px;
+}
+.main .left{
+	background-color: #393D49;
+    height: 690px;
+}
+.main .left .layui-nav-item{
+	width: 251.5px;
+}
+.main .right iframe{
+	width: 100%;
+	height: 680px;
+}
