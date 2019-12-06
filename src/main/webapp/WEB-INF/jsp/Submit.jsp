@@ -37,7 +37,7 @@
     <form>
 			Name:<input name="username" value="" type="text"> <br><br>
 			Password:<input name="password" value="" type="password"> <br><br>
-			:<input name="status" value="1" type="text"> <br><br>
+			Status:<input name="status" value="1" type="text"> <br><br>
 			<input type="submit" value="增加" <%--id="sender"--%>>
 	</form>
     <div id="messageDiv"></div>
